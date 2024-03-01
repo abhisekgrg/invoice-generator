@@ -6,3 +6,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+.section{
+    padding: 50px 0;
+
+}
+.container{
+    width: 60%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 2px 2px 10px 4px rgba(0, 0,0,0.1);
+}
+
+button{
+    font-size: 18px;
+padding: 5px 12px;
+border-radius: 30px;
+border: 1px solid #1d77e0;
+background-color: #1d78e000;
+color: #1d77e0;
+font-weight: 500;
+}
