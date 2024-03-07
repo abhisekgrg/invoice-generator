@@ -1,27 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invoice Generator</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/utility.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-   <div class="section flex justify-content">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/utility.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  </head>
+  <body>
+<div class="section flex justify-content">
     <div class="container flex flex-column rowg-2">
         <div>
-
-            <button>PDF</button>
+          <button onclick="pdf()">PDF</button>
         </div>
+        <div id="pdf">
+
         <div class="header flex space-between align-items">
-            <input type="file">
-            <h1>INVOICE</h1>
+          <input type="file" />
+          <h1>INVOICE</h1>
+        </div>
+        <!-- details -->
+        <div class="details flex space-between">
+          <div class="leftside flex flex-column rowg-1">
+            <input
+              type="text"
+              id="company-name"
+              placeholder="Your company name"
+            />
+            <input id="user-name" type="text" placeholder="Your name" />
+            <input id="company-email" type="email" placeholder="Your email address" />
+          </div>
+          <div class="righttside flex flex-column rowg-1">
+            <label for="invoice" class="flex columng-2"
+              >Invoice
+              <input class="number" type="number" />
+            </label>
+            <label for="due-date" class="columng-2"
+              >Due date:
+              <input class="number" type="date" />
+            </label>
+            <label for="invoice" class="columng-2"
+              >Currency:
+              <input class="number" type="number" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Bill to -->
+        <div class="flex flex-column rowg-1">
+          <h2>Bill To:</h2>
+          <input id="customer-name" type="text" placeholder="Customer name" />
+          <input id ="customer-email" type="email" placeholder="Customer email address" />
+        </div>
+
+        <!-- customer name -->
+        <table id="dolist">
+          <tr>
+            <th>Description</th>
+            <th>Quentity</th>
+            <th>Price</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td><input type="text" id="item"></td>
+            <td><input type="number" id="qty"></td>
+            <td><input type="number" id="rate"></td>
+            <td id="item-total"></td>
+          </tr>
+          
+         
+        </table>
+        <button onclick="add_item()">+ Add Another line item</button>
+        <div class="sub flex">
+            <div>
+                <p>Note to recipient</p>
+                <div class="sub2 flex">
+                    <div>
+                        <p>Subtotal</p>
+                        <p>Shipping</p>
+                        <p>Total</p>
+                    </div>
+                    <div>
+                        <p>$0.00</p>
+                        <p>$0.000</p>
+                        <p>$0.00USD</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-   </div>
+
+    </div>
+    
+</div>
 
     <script src="/js/app.js"></script>
-</body>
+  </body>
 </html>

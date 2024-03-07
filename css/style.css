@@ -12,7 +12,7 @@
 }
 .container{
     width: 60%;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     background-color: white;
     box-shadow: 2px 2px 10px 4px rgba(0, 0,0,0.1);
@@ -26,4 +26,50 @@ border: 1px solid #1d77e0;
 background-color: #1d78e000;
 color: #1d77e0;
 font-weight: 500;
+}
+input{
+    padding: 5px;
+    color: rgb(75, 75, 75);
+    border: none;
+}
+#company-name{
+    font-size: 18px;
+    font-weight: 500;
+}
+.number{
+    width: 200px;
+}
+table{
+    border-collapse: collapse;
+
+    border-spacing: 0px!important;
+    width:40%;
+
+}
+table th{
+    background-color: rgba(179, 179, 179, 0.34);
+    text-align: left;
+
+
+}
+ th,td {
+    border: none;
+    padding: 20px;
+}
+tr{
+    border-top:1px solid gray;
+}
+button{
+    border-radius: 8px;
+    background-color: rgb(171, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    color: black;
+}
+.sub{
+    width: 30%;
+    column-gap: 325px;
+}
+.sub2{
+    column-gap: 100px;
 }
